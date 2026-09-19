@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Akriti ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,180,210,.35), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(255,210,225,.4), transparent 30%),
+        linear-gradient(135deg, #fff8fb, #fff0f6);
+    color: #5c4050;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: .45;
+}
+
+.glow.one {
+    width: 280px;
+    height: 280px;
+    background: #ffc8dc;
+    top: -80px;
+    left: -80px;
+}
+
+.glow.two {
+    width: 300px;
+    height: 300px;
+    background: #ffdce9;
+    right: -100px;
+    bottom: -100px;
+}
+
+.heart-bg {
+    position: absolute;
+    font-size: 22px;
+    opacity: .18;
+    animation: floatHeart 7s infinite ease-in-out;
+}
+
+.h1 { left: 8%; top: 18%; }
+.h2 { left: 86%; top: 20%; animation-delay: 1.5s; }
+.h3 { left: 15%; top: 78%; animation-delay: 3s; }
+.h4 { left: 78%; top: 70%; animation-delay: 4.5s; }
+
+@keyframes floatHeart {
+    0%,100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.page.active {
+    display: flex;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro-content {
+    text-align: center;
+    max-width: 850px;
+    padding: 30px;
+}
+
+.intro-small {
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #b68196;
+    margin-bottom: 22px;
+    opacity: 0;
+    animation: fadeUp 1s .3s forwards;
+}
+
+.intro-title {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(48px,8vw,90px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: #b44e76;
+    opacity: 0;
+    animation: fadeUp 1.2s .8s forwards;
+}
+
+.intro-subtitle {
+    margin-top: 22px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(17px,2vw,23px);
+    color: #856271;
+    opacity: 0;
+    animation: fadeUp 1s 1.8s forwards;
+}
+
+.intro-hearts {
+    margin-top: 28px;
+    font-size: 22px;
+    letter-spacing: 10px;
+    opacity: 0;
+    animation: fadeUp 1s 2.6s forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    width: min(680px,100%);
+    background: rgba(255,255,255,.78);
+    border: 1px solid rgba(255,190,215,.55);
+    border-radius: 30px;
+    padding: 50px 45px;
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(167,88,118,.13),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    backdrop-filter: blur(18px);
+
+    animation: cardIn .8s ease forwards;
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.card-kicker {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c1849d;
+    margin-bottom: 13px;
+}
+
+.card-title {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(48px,7vw,72px);
+    font-weight: 400;
+    color: #b44e76;
+    line-height: 1.1;
+}
+
+.card-question {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(25px,4vw,38px);
+    color: #714e60;
+    margin: 18px 0 30px;
+}
+
+.card-text {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #7d6370;
+    margin: 18px auto 30px;
+    max-width: 530px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    border: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg,#c85c83,#a9436c);
+    color: white;
+    box-shadow: 0 10px 25px rgba(180,78,118,.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(180,78,118,.32);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #a84e73;
+    border: 1px solid #efbfd2;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    background: #fff7fa;
+}
+
+/* =========================
+   PAGE TWO
+========================= */
+
+.question-buttons {
+    position: relative;
+    height: 80px;
+    margin-top: 25px;
+}
+
+.yes-button,
+.no-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.yes-button {
+    left: calc(50% - 110px);
+}
+
+.no-button {
+    left: calc(50% + 20px);
+    transition: left .18s ease, top .18s ease;
+}
+
+.love-card {
+    display: none;
+}
+
+.love-card.show {
+    display: block;
+}
+
+.slider-wrap {
+    margin-top: 28px;
+}
+
+.slider {
+    width: 100%;
+    height: 8px;
+    appearance: none;
+    border-radius: 20px;
+    outline: none;
+
+    background:
+        linear-gradient(
+            to right,
+            #c85c83 0%,
+            #c85c83 0%,
+            #f3d6e2 0%,
+            #f3d6e2 100%
+        );
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #b44e76;
+    border: 4px solid white;
+    box-shadow: 0 3px 12px rgba(160,65,100,.3);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b44e76;
+    border: 4px solid white;
+    box-shadow: 0 3px 12px rgba(160,65,100,.3);
+    cursor: pointer;
+}
+
+.percent {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #b44e76;
+}
+
+.emoji {
+    font-size: 48px;
+    margin-top: 12px;
+}
+
+.max-message {
+    display: none;
+    margin-top: 18px;
+    font-family: "Great Vibes", cursive;
+    font-size: 34px;
+    color: #b44e76;
+}
+
+.final-continue {
+    display: none;
+    margin-top: 25px;
+}
+
+/* =========================
+   GIFT SELECTION
+========================= */
+
+.gift-selection {
+    width: min(1050px,100%);
+    text-align: center;
+}
+
+.gift-heading {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(50px,7vw,75px);
+    color: #b44e76;
+}
+
+.gift-subheading {
+    margin-top: 8px;
+    color: #876774;
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+}
+
+.gifts {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.gift-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    color: #765566;
+    transition: .3s ease;
+}
+
+.gift-button:hover {
+    transform: translateY(-10px);
+}
+
+.gift-icon {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+}
+
+.gift-body {
+    position: absolute;
+    width: 105px;
+    height: 82px;
+    left: 12px;
+    bottom: 5px;
+    border-radius: 8px;
+    background: linear-gradient(135deg,#e987aa,#c95782);
+    box-shadow: 0 12px 25px rgba(190,80,120,.2);
+}
+
+.gift-lid {
+    position: absolute;
+    width: 120px;
+    height: 27px;
+    left: 5px;
+    top: 30px;
+    border-radius: 7px;
+    background: linear-gradient(135deg,#f2a6c0,#d56891);
+}
+
+.gift-ribbon {
+    position: absolute;
+    width: 18px;
+    height: 95px;
+    left: 56px;
+    top: 25px;
+    background: #fff0c7;
+    z-index: 3;
+}
+
+.gift-bow-left,
+.gift-bow-right {
+    position: absolute;
+    width: 38px;
+    height: 25px;
+    top: 8px;
+    background: #f0c6d5;
+    border-radius: 50% 50% 10% 50%;
+    z-index: 5;
+}
+
+.gift-bow-left {
+    left: 30px;
+    transform: rotate(-25deg);
+}
+
+.gift-bow-right {
+    right: 30px;
+    transform: rotate(25deg) scaleX(-1);
+}
+
+.gift-label {
+    display: block;
+    margin-top: 18px;
+    font-family: "Playfair Display",serif;
+    font-size: 16px;
+}
+
+/* =========================
+   GIFT PAGES
+========================= */
+
+.gift-screen {
+    overflow-y: auto;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.gift-page {
+    width: min(1000px,100%);
+    text-align: center;
+}
+
+.gift-page-title {
+    font-family: "Great Vibes",cursive;
+    font-size: clamp(48px,7vw,72px);
+    color: #b44e76;
+}
+
+.gift-page-subtitle {
+    font-family: "Playfair Display",serif;
+    color: #7d6370;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 35px;
+}
+
+.back-button {
+    margin-top: 40px;
+}
+
+/* =========================
+   GIFT 1 — SONGS
+========================= */
+
+.songs-list {
+    width: min(760px,100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.song-card {
+    background: rgba(255,255,255,.82);
+    border: 1px solid rgba(230,174,195,.55);
+    border-radius: 22px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 12px 35px rgba(160,80,110,.09);
+}
+
+.song-number {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: #f8d9e5;
+    color: #a64d72;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.song-title {
+    display: inline-block;
+    font-family: "Playfair Display",serif;
+    font-size: 20px;
+    color: #704c5d;
+    vertical-align: middle;
+}
+
+.song-video {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 15px;
+    background: #1f1f1f;
+    max-height: 430px;
+}
+
+.song-note {
+    font-size: 14px;
+    color: #927681;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* =========================
+   GIFT 2 — SKETCHES
+========================= */
+
+.sketch-gallery {
+    width: min(1000px,100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 35px;
+    align-items: start;
+}
+
+.sketch-frame {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    background: #fffdf9;
+    border: 1px solid #e4d4c5;
+    box-shadow:
+        0 12px 30px rgba(100,70,60,.14),
+        0 3px 8px rgba(100,70,60,.08);
+    border-radius: 3px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.sketch-frame:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 18px 38px rgba(100,70,60,.18),
+        0 4px 10px rgba(100,70,60,.1);
+}
+
+.sketch-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    background: #fafafa;
+}
+
+.sketch-frame::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(150,120,105,.18);
+    pointer-events: none;
+}
+
+.sketch-caption {
+    padding-top: 13px;
+    padding-bottom: 2px;
+    font-family: "Playfair Display",serif;
+    font-size: 15px;
+    color: #80616e;
+}
+/* =========================
+   GIFT 3 — DISTANCE
+========================= */
+
+.distance-card {
+    width: min(850px,100%);
+    margin: 0 auto;
+    padding: 22px;
+    background: rgba(255,255,255,.82);
+    border: 1px solid rgba(235,190,208,.65);
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 55px rgba(160,75,110,.12),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    backdrop-filter: blur(15px);
+}
+
+.distance-image-wrap {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fffafc;
+    box-shadow: 0 8px 25px rgba(100,70,80,.1);
+}
+
+.distance-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.distance-message {
+    max-width: 720px;
+    margin: 32px auto 10px;
+    padding: 0 15px;
+}
+
+.distance-message p {
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    line-height: 2;
+    color: #765766;
+}
+
+.distance-message .highlight {
+    font-family: "Great Vibes", cursive;
+    font-size: 35px;
+    color: #b44e76;
+    display: block;
+    margin-top: 18px;
+}
+
+.distance-hearts {
+    margin-top: 22px;
+    font-size: 20px;
+    letter-spacing: 8px;
+    color: #c27695;
+}
+
+/* =========================
+   OTHER GIFTS
+========================= */
+
+.placeholder {
+    margin: 30px auto;
+    max-width: 650px;
+    padding: 45px 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.7);
+    border: 1px solid #f0cad9;
+}
+
+.placeholder-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.final-vn-wrap {
+    width: min(760px,100%);
+    margin: 0 auto;
+}
+
+.vn-card {
+    background: rgba(255,255,255,.82);
+    border: 1px solid rgba(235,190,208,.65);
+    border-radius: 28px;
+    padding: 38px 35px;
+    box-shadow:
+        0 20px 55px rgba(160,75,110,.12),
+        inset 0 1px 0 rgba(255,255,255,.9);
+    backdrop-filter: blur(15px);
+}
+
+.letter-title {
+    font-family: "Great Vibes",cursive;
+    font-size: clamp(38px,6vw,55px);
+    font-weight: 400;
+    color: #b44e76;
+    margin-bottom: 24px;
+}
+
+.vn-audio {
+    display: block;
+    width: 100%;
+    margin: 0 auto 28px;
+}
+
+.letter-card {
+    text-align: left;
+    padding: 28px 30px;
+    background: rgba(255,248,251,.8);
+    border: 1px solid rgba(235,190,208,.55);
+    border-radius: 20px;
+}
+
+.letter-card p {
+    font-family: "Playfair Display",serif;
+    font-size: 17px;
+    line-height: 1.85;
+    color: #765766;
+    margin-bottom: 17px;
+}
+
+.letter-card p:last-child {
+    margin-bottom: 0;
+}
+
+.letter-signature {
+    font-family: "Great Vibes",cursive !important;
+    font-size: 32px !important;
+    line-height: 1.35 !important;
+    color: #b44e76 !important;
+    text-align: right;
+    margin-top: 24px;
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 12px;
+    top: -20px;
+    z-index: 100;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px) {
+
+    .gifts {
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        margin-top: 35px;
+    }
+
+    .gift-selection {
+        overflow-y: auto;
+        max-height: 90vh;
+    }
+
+    .card {
+        padding: 40px 25px;
+    }
+
+    .sketch-gallery {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .distance-card {
+        padding: 15px;
+    }
+
+    .distance-message p {
+        font-size: 17px;
+    }
+}
+
+@media(max-width:500px) {
+
+    .vn-card {
+        padding: 28px 18px;
+    }
+
+    .letter-card {
+        padding: 22px 18px;
+    }
+
+    .letter-card p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 35px 20px;
+        border-radius: 24px;
+    }
+
+    .gifts {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gift-icon {
+        transform: scale(.85);
+    }
+
+    .gift-page-title {
+        font-size: 48px;
+    }
+
+    .song-card {
+        padding: 15px;
+    }
+
+    .song-title {
+        font-size: 17px;
+    }
+
+    .sketch-frame {
+        padding: 12px;
+    }
+
+    .distance-message p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .distance-message .highlight {
+        font-size: 30px;
+    }
+}
+
+
+    .gift-four-gallery {
+        width: min(900px,100%);
+    }
+
+    .gift-four-gallery .sketch-frame {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gift-four-gallery .edit-video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        object-fit: contain;
+        background: #1f1f1f;
+        border-radius: 2px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     BACKGROUND
+========================= -->
+
+<div class="background">
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <div class="heart-bg h1">♡</div>
+    <div class="heart-bg h2">♡</div>
+    <div class="heart-bg h3">♡</div>
+    <div class="heart-bg h4">♡</div>
+
+</div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="page active" id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            A little something for you
+        </div>
+
+        <h1 class="intro-title">
+            Happy Birthday
+        </h1>
+
+        <div class="intro-subtitle">
+            to the most precious person in the world ♡
+        </div>
+
+        <div class="intro-hearts">
+            ♡ ✦ ♡
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE ONE
+========================= -->
+
+<section class="page" id="pageOneCard">
+
+    <div class="card">
+
+        <div class="card-kicker">
+            A birthday surprise
+        </div>
+
+        <h1 class="card-title">
+            To Akriti
+        </h1>
+
+        <p class="card-text">
+            Today is about celebrating you — the person who makes
+            ordinary moments feel a little more special.
+            I made something small for you, filled with things
+            that remind me of you. ♡
+        </p>
+
+        <button class="btn btn-primary" id="pageOneContinue">
+            Continue with your gift →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE TWO
+========================= -->
+
+<section class="page" id="pageTwo">
+
+    <div class="card" id="questionCard">
+
+        <div class="card-kicker">
+            One important question
+        </div>
+
+        <h1 class="card-title">
+            Akriti
+        </h1>
+
+        <div class="card-question">
+            Do you love me? ♡
+        </div>
+
+        <div class="question-buttons">
+
+            <button class="btn btn-primary yes-button" id="yesButton">
+                Yes ♡
+            </button>
+
+            <button class="btn btn-secondary no-button" id="noButton">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="card love-card" id="loveCard">
+
+        <div class="card-kicker">
+            I knew it ♡
+        </div>
+
+        <h1 class="card-title">
+            Yayyy! ♡
+        </h1>
+
+        <p class="card-text">
+            You said yes... but now tell me how much?
+        </p>
+
+        <div class="slider-wrap">
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="slider"
+                id="loveSlider"
+            >
+
+            <div class="percent" id="percentDisplay">
+                0%
+            </div>
+
+            <div class="emoji" id="emojiDisplay">
+                😐
+            </div>
+
+            <div class="max-message" id="maxMessage">
+                I knew it was 100% ♡
+            </div>
+
+            <button
+                class="btn btn-primary final-continue"
+                id="finalContinue"
+            >
+                Continue to your gifts →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT SELECTION
+========================= -->
+
+<section class="page" id="giftSelectionPage">
+
+    <div class="gift-selection">
+
+        <h1 class="gift-heading">
+            Your Gifts ♡
+        </h1>
+
+        <p class="gift-subheading">
+            I picked a few things especially for you...
+        </p>
+
+        <div class="gifts">
+
+            <!-- GIFT 1 -->
+
+            <button class="gift-button" data-gift="1">
+
+                <div class="gift-icon">
+
+                    <div class="gift-bow-left"></div>
+                    <div class="gift-bow-right"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+
+                </div>
+
+                <span class="gift-label">
+                    Gift One ♡
+                </span>
+
+            </button>
+
+
+            <!-- GIFT 2 -->
+
+            <button class="gift-button" data-gift="2">
+
+                <div class="gift-icon">
+
+                    <div class="gift-bow-left"></div>
+                    <div class="gift-bow-right"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+
+                </div>
+
+                <span class="gift-label">
+                    Gift Two ♡
+                </span>
+
+            </button>
+
+
+            <!-- GIFT 3 -->
+
+            <button class="gift-button" data-gift="3">
+
+                <div class="gift-icon">
+
+                    <div class="gift-bow-left"></div>
+                    <div class="gift-bow-right"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+
+                </div>
+
+                <span class="gift-label">
+                    Gift Three ♡
+                </span>
+
+            </button>
+
+
+            <!-- GIFT 4 -->
+
+            <button class="gift-button" data-gift="4">
+
+                <div class="gift-icon">
+
+                    <div class="gift-bow-left"></div>
+                    <div class="gift-bow-right"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+
+                </div>
+
+                <span class="gift-label">
+                    Gift Four ♡
+                </span>
+
+            </button>
+
+
+            <!-- GIFT 5 -->
+
+            <button class="gift-button" data-gift="5">
+
+                <div class="gift-icon">
+
+                    <div class="gift-bow-left"></div>
+                    <div class="gift-bow-right"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+
+                </div>
+
+                <span class="gift-label">
+                    Gift Five ♡
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT 1 — SONGS
+========================= -->
+
+<section class="page gift-screen" id="gift1">
+
+    <div class="gift-page">
+
+        <h1 class="gift-page-title">
+            Songs That Remind Me of You ♡
+        </h1>
+
+        <p class="gift-page-subtitle">
+            Five little songs that somehow remind me of you...
+        </p>
+
+
+        <div class="songs-list">
+
+
+            <div class="song-card">
+
+                <div>
+                    <span class="song-number">1</span>
+                    <span class="song-title">Song One</span>
+                </div>
+
+                <video
+                    class="song-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="HASEEN - TALWIINDER, NDS, RIPPY (Official Visualizer).mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+
+                <p class="song-note">
+                    A song that instantly makes me think of you. ♡
+                </p>
+
+            </div>
+
+
+            <div class="song-card">
+
+                <div>
+                    <span class="song-number">2</span>
+                    <span class="song-title">Song Two</span>
+                </div>
+
+                <video
+                    class="song-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="JVKE - her (official lyric video).mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+
+                <p class="song-note">
+                    Another one that belongs here because of you. ♡
+                </p>
+
+            </div>
+
+
+            <div class="song-card">
+
+                <div>
+                    <span class="song-number">3</span>
+                    <span class="song-title">Song Three</span>
+                </div>
+
+                <video
+                    class="song-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="Labon Ko - (Lyrics) _ Bhool Bhulaiyaa _ Pritam _ K.K._ Akshay Kumar, Shiney Ahuja, Vidya Balan.mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+
+                <p class="song-note">
+                    Somehow this one just feels like you. ♡
+                </p>
+
+            </div>
+
+
+            <div class="song-card">
+
+                <div>
+                    <span class="song-number">4</span>
+                    <span class="song-title">Song Four</span>
+                </div>
+
+                <video
+                    class="song-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="Michael Bublé - Sway (Lyrics).mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+
+                <p class="song-note">
+                    One more song for one very special person. ♡
+                </p>
+
+            </div>
+
+
+            <div class="song-card">
+
+                <div>
+                    <span class="song-number">5</span>
+                    <span class="song-title">Song Five</span>
+                </div>
+
+                <video
+                    class="song-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="Ricky Montgomery - Line Without a Hook (Lyrics).mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+
+                <p class="song-note">
+                    And this one had to be here too. ♡
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="btn btn-secondary back-button">
+            ← Back to the gifts
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT 2 — SKETCHES
+========================= -->
+
+<section class="page gift-screen" id="gift2">
+
+    <div class="gift-page">
+
+        <h1 class="gift-page-title">
+            Sketches I Made for You ♡
+        </h1>
+
+        <p class="gift-page-subtitle">
+            Four little pieces of art, made with you in mind...
+        </p>
+
+
+        <div class="sketch-gallery">
+
+
+            <div class="sketch-frame">
+                <img src="ChatGPT Image Sep 17, 2026, 04_06_46 AM.png" alt="Sketch 1">
+                <div class="sketch-caption">♡</div>
+            </div>
+
+
+            <div class="sketch-frame">
+                <img src="ChatGPT Image Sep 17, 2026, 04_07_48 AM.png" alt="Sketch 2">
+                <div class="sketch-caption">♡</div>
+            </div>
+
+
+            <div class="sketch-frame">
+                <img src="ghgh.jpg" alt="Sketch 3">
+                <div class="sketch-caption">♡</div>
+            </div>
+
+
+            <div class="sketch-frame">
+                <img src="uhi.jpg" alt="Sketch 4">
+                <div class="sketch-caption">♡</div>
+            </div>
+
+</div>
+
+
+        <button class="btn btn-secondary back-button">
+            ← Back to the gifts
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT 3 — DISTANCE
+========================= -->
+
+<section class="page gift-screen" id="gift3">
+
+    <div class="gift-page">
+
+        <h1 class="gift-page-title">
+            A Little Map of Us ♡
+        </h1>
+
+        <p class="gift-page-subtitle">
+            Two countries. Two places. One heart.
+        </p>
+
+
+        <div class="distance-card">
+
+            <div class="distance-image-wrap">
+
+                <img
+                    class="distance-image"
+                    src="distance-map.png"
+                    alt="A map connecting Pakistan and India"
+                >
+
+            </div>
+
+
+            <div class="distance-message">
+
+                <p>
+                    There may be a whole distance between where you are
+                    and where I am, but somehow you have never felt far
+                    away from me.
+                </p>
+
+                <p>
+                    Maps can show the miles between Pakistan and India,
+                    but they can't measure the place you have in my heart.
+                    No matter how many roads, borders, or miles stand
+                    between us, you are still one of the closest people
+                    to me.
+                </p>
+
+                <p>
+                    You may be there and I may be here, but somehow
+                    you are always with me — in my thoughts, in my
+                    favorite moments, and in all the little things that
+                    remind me of you.
+                </p>
+
+                <span class="highlight">
+                    Distance means nothing when someone means everything. ♡
+                </span>
+
+                <div class="distance-hearts">
+                    ♡ &nbsp; ✦ &nbsp; ♡ &nbsp; ✦ &nbsp; ♡
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button class="btn btn-secondary back-button">
+            ← Back to the gifts
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT 4
+========================= -->
+
+<section class="page gift-screen" id="gift4">
+
+    <div class="gift-page">
+
+        <h1 class="gift-page-title">
+            Gift Four ♡
+        </h1>
+
+        <p class="gift-page-subtitle">
+            A little surprise just for you...
+        </p>
+
+        <div class="sketch-gallery gift-four-gallery">
+
+            <div class="sketch-frame">
+                <video class="edit-video" controls playsinline preload="metadata"><source src="WhatsApp Video 2026-09-17 at 5.12.08 AM.mp4" type="video/mp4">Your browser does not support video playback.</video>
+                <div class="sketch-caption">♡</div>
+            </div>
+
+            <div class="sketch-frame">
+                <video class="edit-video" controls playsinline preload="metadata"><source src="WhatsApp Video 2026-09-17 at 5.12.14 AM.mp4" type="video/mp4">Your browser does not support video playback.</video>
+                <div class="sketch-caption">♡</div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-secondary back-button">
+            ← Back to the gifts
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT 5
+========================= -->
+
+<section class="page gift-screen" id="gift5">
+
+    <div class="gift-page">
+
+        <h1 class="gift-page-title">
+            Gift Five ♡
+        </h1>
+
+        <p class="gift-page-subtitle">
+            The last one... but definitely not the least.
+        </p>
+
+        <div class="final-vn-wrap">
+
+            <div class="vn-card">
+                <div class="placeholder-icon">♡</div>
+
+                <h2 class="letter-title">For You, Akriti</h2>
+
+                <audio class="vn-audio" controls preload="metadata">
+                    <source src="Happy.mp3" type="audio/mpeg">
+                    Your browser does not support audio playback.
+                </audio>
+
+                <div class="letter-card">
+                    <p>My dearest Akriti,</p>
+
+                    <p>
+                        I could write a thousand things about you and still feel
+                        like I had left something unsaid. So instead, I just want
+                        you to know that having you in my life has made ordinary
+                        moments feel a little more beautiful.
+                    </p>
+
+                    <p>
+                        This little surprise is made from pieces of things I
+                        wanted to give you, but this final one is simply a few
+                        words from my heart. I hope whenever you listen to it,
+                        you remember that somewhere, someone is thinking of you
+                        with a smile.
+                    </p>
+
+                    <p>
+                        Thank you for being you. For the conversations, the
+                        memories, the laughter, and all the little moments that
+                        somehow became important to me.
+                    </p>
+
+                    <p>
+                        Happy Birthday, Akriti. ♡
+                    </p>
+
+                    <p class="letter-signature">
+                        Yours,<br>
+                        Sam
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-secondary back-button">
+            ← Back to the gifts
+        </button>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   PAGE SWITCHING
+========================= */
+
+function showPage(id) {
+
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    const target = document.getElementById(id);
+
+    if (target) {
+        target.classList.add("active");
+    }
+
+    window.scrollTo(0,0);
+}
+
+
+/* =========================
+   INTRO → PAGE ONE
+========================= */
+
+setTimeout(() => {
+    showPage("pageOneCard");
+},4200);
+
+
+/* =========================
+   PAGE ONE → PAGE TWO
+========================= */
+
+document
+.getElementById("pageOneContinue")
+.addEventListener("click",() => {
+
+    showPage("pageTwo");
+
+});
+
+
+/* =========================
+   RUNAWAY NO BUTTON
+========================= */
+
+const noButton =
+    document.getElementById("noButton");
+
+function moveNoButton() {
+
+    const padding = 20;
+
+    const maxX =
+        window.innerWidth -
+        noButton.offsetWidth -
+        padding;
+
+    const maxY =
+        window.innerHeight -
+        noButton.offsetHeight -
+        padding;
+
+    const x =
+        Math.max(
+            padding,
+            Math.random() * maxX
+        );
+
+    const y =
+        Math.max(
+            padding,
+            Math.random() * maxY
+        );
+
+    noButton.style.position = "fixed";
+    noButton.style.left = x + "px";
+    noButton.style.top = y + "px";
+    noButton.style.transform = "none";
+}
+
+noButton.addEventListener(
+    "mouseenter",
+    moveNoButton
+);
+
+noButton.addEventListener(
+    "click",
+    event => {
+
+        event.preventDefault();
+        moveNoButton();
+
+    }
+);
+
+noButton.addEventListener(
+    "touchstart",
+    event => {
+
+        event.preventDefault();
+        moveNoButton();
+
+    }
+);
+
+
+/* =========================
+   YES BUTTON
+========================= */
+
+document
+.getElementById("yesButton")
+.addEventListener("click",() => {
+
+    document
+    .getElementById("questionCard")
+    .style.display = "none";
+
+    document
+    .getElementById("loveCard")
+    .classList.add("show");
+
+});
+
+
+/* =========================
+   LOVE SLIDER
+========================= */
+
+const loveSlider =
+    document.getElementById("loveSlider");
+
+const percentDisplay =
+    document.getElementById("percentDisplay");
+
+const emojiDisplay =
+    document.getElementById("emojiDisplay");
+
+const maxMessage =
+    document.getElementById("maxMessage");
+
+const finalContinue =
+    document.getElementById("finalContinue");
+
+loveSlider.addEventListener("input",() => {
+
+    const value =
+        Number(loveSlider.value);
+
+    percentDisplay.textContent =
+        value + "%";
+
+    loveSlider.style.background =
+        `linear-gradient(
+            to right,
+            #c85c83 0%,
+            #c85c83 ${value}%,
+            #f3d6e2 ${value}%,
+            #f3d6e2 100%
+        )`;
+
+
+    if (value < 15) {
+
+        emojiDisplay.textContent = "😐";
+
+    }
+    else if (value < 30) {
+
+        emojiDisplay.textContent = "🙂";
+
+    }
+    else if (value < 45) {
+
+        emojiDisplay.textContent = "😊";
+
+    }
+    else if (value < 60) {
+
+        emojiDisplay.textContent = "🥰";
+
+    }
+    else if (value < 75) {
+
+        emojiDisplay.textContent = "😍";
+
+    }
+    else if (value < 90) {
+
+        emojiDisplay.textContent = "🤩";
+
+    }
+    else if (value < 100) {
+
+        emojiDisplay.textContent = "💗";
+
+    }
+    else {
+
+        emojiDisplay.textContent = "💖";
+
+        maxMessage.style.display =
+            "block";
+
+        finalContinue.style.display =
+            "inline-block";
+
+        launchConfetti();
+
+    }
+
+});
+
+
+/* =========================
+   CONTINUE → GIFTS
+========================= */
+
+finalContinue.addEventListener(
+    "click",
+    () => {
+
+        showPage("giftSelectionPage");
+
+    }
+);
+
+
+/* =========================
+   GIFT BUTTONS
+========================= */
+
+document
+.querySelectorAll(".gift-button")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const giftNumber =
+                button.dataset.gift;
+
+            showPage(
+                "gift" + giftNumber
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================
+   BACK TO GIFTS
+========================= */
+
+document
+.querySelectorAll(".back-button")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            showPage(
+                "giftSelectionPage"
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+let confettiStarted = false;
+
+function launchConfetti() {
+
+    if (confettiStarted) return;
+
+    confettiStarted = true;
+
+    const symbols = [
+        "♡",
+        "✦",
+        "♥",
+        "✧",
+        "•"
+    ];
+
+    for (let i = 0; i < 90; i++) {
+
+        const piece =
+            document.createElement("div");
+
+        piece.className =
+            "confetti";
+
+        piece.textContent =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.fontSize =
+            (8 + Math.random() * 12) + "px";
+
+        piece.style.animationDuration =
+            (2.5 + Math.random() * 3) + "s";
+
+        piece.style.animationDelay =
+            Math.random() * .8 + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+
+            piece.remove();
+
+        },6000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
